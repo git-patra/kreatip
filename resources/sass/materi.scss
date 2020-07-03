@@ -1,0 +1,332 @@
+/* Utility */
+$colortheme: #A8A2E2;
+$color: #000;
+$shadow: #ddd;
+$mt2: 2rem;
+$mt4: 4rem;
+
+/* Main List */
+.main-list {
+    min-width: 1200px;
+
+    /* Pick Materi Card */
+    .pick-materi {
+        h2 {
+            margin-top: 3rem;
+        }
+
+        @media(max-width: 380px) {
+            h2 {
+                margin-top: 1rem;
+            }
+        }
+
+        .conten-card {
+            h3 {
+                margin-bottom: 2rem;
+            }
+
+            .card-materi:hover {
+                transition: .2s;
+                transform: scale(1.1);
+            }
+
+            .card-materi {
+                width: 200px;
+                border: none;
+                padding: .5rem;
+                border-radius: 20px;
+                background: #ffffff;
+                box-shadow: 13px 13px 34px #d6d6d6,
+                    -13px -13px 34px #ffffff;
+
+                h3 {
+                    padding: .5rem;
+                    margin-bottom: 0;
+                }
+
+                .card-body {
+                    padding: .5rem;
+                }
+            }
+
+            @media(max-width:768px) {
+                .card-materi {
+                    margin-left: 0;
+                }
+            }
+
+            @media(max-width:380px) {
+                .card-materi {
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+    }
+
+    /* Suggest Artikel */
+    .suggest-article {
+        h4 {
+            margin-top: 5rem;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .col-4 {
+            padding: 0;
+        }
+
+        .col-8 {
+            font-size: .9rem;
+
+            a {
+                transition: .2s;
+            }
+
+            a:hover {
+                border-bottom: 1px solid $color;
+            }
+        }
+
+        .suggest-card {
+            padding: 1rem;
+            border-radius: 10px;
+            padding-right: 0;
+            transition: .2s;
+
+            .col-8 {
+                padding-right: 0;
+            }
+        }
+
+        .suggest-card:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 10px $shadow;
+        }
+    }
+
+    @media(max-width: 1024px) {
+        .suggest-article {
+            border-top: 1px solid $shadow;
+            padding-top: 2rem;
+
+            h4 {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+@media(max-width:1200px) {
+    .main-list {
+        min-width: 0 !important;
+        max-width: 1140px;
+    }
+}
+
+/* Sorry */
+.sorry {
+    padding: 1rem;
+    box-shadow: 2px 2px 10px $shadow;
+    margin-top: 4rem;
+
+    img {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    @media(max-width: 380px) {
+        img {
+            max-width: 300px;
+        }
+    }
+}
+
+/* Detail Materi */
+.map {
+    background-color: #F0ECF7;
+    padding: 1rem;
+
+    ul {
+        margin: 0;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: $colortheme;
+            }
+
+            a:hover {
+                color: #acacac;
+            }
+        }
+    }
+}
+
+.materi {
+    min-width: 1200px;
+    margin-top: $mt4;
+
+    .sidebar-left {
+        padding: $mt2;
+        padding-top: 0;
+
+        .sticky-top {
+            top: 7rem;
+        }
+
+        h4 {
+            color: $colortheme;
+        }
+
+        input {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        select {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            padding-left: 0;
+            margin: 0;
+
+            li {
+                padding: .5rem 1rem;
+
+                a {
+                    color: $colortheme;
+                }
+
+                a:hover {
+                    font-weight: 600;
+                    border-bottom: 1px solid $colortheme;
+                }
+
+                .active {
+                    font-weight: 600;
+                }
+
+            }
+
+            li:hover {
+                background-color: rgba($colortheme, $alpha: .1);
+            }
+        }
+
+        .list-materi {
+            max-height: 60vh;
+            overflow-y: auto;
+        }
+
+        .list-materi::-webkit-scrollbar-thumb {
+            background: $colortheme;
+            border-radius: 5px;
+        }
+
+        .list-materi::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        @media(max-width: 1024px) {
+            .list-materi {
+                max-height: 30vh;
+            }
+        }
+
+        @media(max-width: 380px) {
+            h4 {
+                text-align: center;
+            }
+
+            .list-materi {
+                margin: 0 .5rem;
+                margin-bottom: 1rem;
+                max-height: 20vh;
+                text-align: center;
+            }
+
+            .sticky-top {
+                position: relative;
+                top: 0;
+            }
+        }
+
+    }
+
+    @media(max-width:1024px) {
+        .sidebar-left {
+            padding: 0;
+            padding-right: 1rem;
+        }
+    }
+
+    @media(max-width:380px) {
+        .sidebar-left {
+            padding: 0;
+        }
+    }
+
+    /* Suggest Artikel */
+    .suggest-article {
+        img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .col-4 {
+            padding: 0;
+        }
+
+        .col-8 {
+            font-size: .9rem;
+
+            a {
+                transition: .2s;
+            }
+
+            a:hover {
+                border-bottom: 1px solid $color;
+            }
+        }
+
+        .suggest-card {
+            padding: 1rem;
+            padding-right: 0;
+            transition: .2s;
+
+            .col-8 {
+                padding-right: 0;
+            }
+        }
+
+        .suggest-card:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 10px $shadow;
+        }
+
+        @media(max-width: 1024px) {
+            h3 {
+                margin-top: 0 !important;
+            }
+        }
+    }
+
+    @media(max-width: 1024px) {
+        .suggest-article {
+            border-top: 1px solid $shadow;
+            padding-top: 2rem;
+        }
+    }
+}
+
+@media(max-width:1024px) {
+    .materi {
+        min-width: 0;
+        margin-top: 2rem;
+    }
+}

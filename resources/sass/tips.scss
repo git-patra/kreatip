@@ -1,0 +1,162 @@
+/* Utility */
+$colortheme: #A8A2E2;
+$color: #000;
+$shadow: #ddd;
+$mt2: 2rem;
+$mt4: 4rem;
+
+/* Area tips populer */
+.tips-populer {
+    h3 {
+        margin-bottom: $mt2;
+    }
+
+    @media(max-width:380px) {
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .card-deck {
+            .col-sm-6 {
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media(max-width:380px) {
+    .tips-populer {
+        margin-top: 2rem;
+    }
+}
+
+/* Area tips new */
+.tips-new {
+    h3 {
+        margin-bottom: $mt2;
+    }
+
+    .btn-loadmore {
+        border: 1px solid $colortheme;
+    }
+
+    .btn-loadmore:hover {
+        color: $colortheme;
+    }
+
+    .card-tips {
+        min-height: 285px;
+        max-height: 285px;
+        transition: .2s;
+
+        .col-12 {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        img {
+            min-height: 150px;
+            max-height: 150px;
+        }
+    }
+
+    @media(max-width:380px) {
+        .col {
+            padding: 0;
+        }
+
+        .card-body {
+            padding-top: 1rem;
+        }
+
+        .card-tips {
+            transition: .2s;
+            box-shadow: 1px 1px 10px $shadow;
+        }
+
+    }
+
+    .card-tips:hover {
+        cursor: pointer;
+        box-shadow: 1px 1px 10px $shadow;
+    }
+}
+
+/* Suggest Arikel on tips page */
+.tips {
+
+    /* Suggest Artikel */
+    .suggest-article {
+        img {
+            width: 100%;
+        }
+
+        .col-4 {
+            padding: 0;
+        }
+
+        .col-8 {
+            font-size: .9rem;
+
+            a {
+                transition: .2s;
+            }
+
+            a:hover {
+                border-bottom: 1px solid $color;
+            }
+        }
+
+        .suggest-card {
+            padding: 1rem;
+            padding-right: 0;
+            transition: .2s;
+            border-radius: 10px;
+
+            .col-8 {
+                padding-right: 0;
+            }
+        }
+
+        .suggest-card:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 10px $shadow;
+        }
+    }
+
+    @media(max-width: 1024px) {
+        .suggest-article {
+            padding-top: 2rem;
+
+            .col {
+                padding-right: 0;
+            }
+
+            h4 {
+                margin-top: 0;
+            }
+        }
+
+        .suggest-card {
+            margin-bottom: 1rem;
+            cursor: pointer;
+            box-shadow: 1px 1px 10px $shadow;
+
+            .col-8 {
+                padding-right: 15px !important;
+            }
+        }
+    }
+
+    @media(max-width: 768px) {
+        .suggest-article {
+            border-top: 1px solid $shadow;
+
+            .col {
+                padding-right: 15px;
+            }
+
+        }
+    }
+}

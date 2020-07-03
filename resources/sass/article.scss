@@ -1,0 +1,144 @@
+/* Utility */
+$colortheme: #A8A2E2;
+$color: #000;
+$shadow: #ddd;
+$mt2: 2rem;
+$mt4: 4rem;
+
+.materi,
+.tips,
+.info {
+    min-width: 1200px;
+    margin-top: $mt4;
+
+    #materi-article {
+        padding: 0;
+    }
+
+    .materi-article,
+    .tips-article,
+    .info-article {
+        padding: 3rem;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px $shadow;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        min-height: 500px;
+
+        .p-img {
+            margin-bottom: 0;
+        }
+
+        img {
+            max-width: 600px;
+            cursor: zoom-in;
+        }
+
+        table {
+            border: 1px solid #acacac;
+
+            tbody {
+                tr {
+                    border: 1px solid #acacac;
+
+                    th,
+                    td {
+                        min-width: 200px;
+
+                        p,
+                        h6 {
+                            span {
+                                line-height: 2 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .card-msearch {
+            min-height: 285px;
+            max-height: 285px;
+            transition: .2s;
+
+            img {
+                min-height: 150px;
+                max-height: 150px;
+                cursor: pointer;
+            }
+
+            h6 {
+                font-size: .9rem;
+            }
+        }
+
+        @media(max-width:768px) {
+            .card-msearch {
+                font-size: .8rem;
+            }
+        }
+
+        @media(max-width:380px) {
+            .card-msearch {
+                min-height: 0;
+                max-height: none;
+            }
+
+            ol,
+            ul {
+
+                padding-left: 20px;
+            }
+
+        }
+
+        .card-msearch:hover {
+            cursor: pointer;
+            box-shadow: 1px 1px 10px $shadow;
+        }
+    }
+
+    @media(max-width: 1024px) {
+
+        .materi-article,
+        .tips-article,
+        .info-article {
+            img {
+                max-width: 350px;
+            }
+        }
+    }
+
+    @media(max-width: 380px) {
+
+        .materi-article,
+        .tips-article,
+        .info-article {
+            padding: 2rem;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            p,
+            li {
+                font-size: .9rem;
+            }
+
+            img {
+                max-width: 250px;
+                max-height: 150px;
+            }
+
+        }
+    }
+}
+
+@media(max-width:1024px) {
+
+    .materi,
+    .tips,
+    .info {
+        min-width: 0;
+        margin-top: 2rem;
+    }
+}
