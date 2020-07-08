@@ -65,5 +65,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         // Dashboard Control ACcess
         'dashboard' => \App\Http\Middleware\Dashboard::class,
+        // appending custom middleware 
+        'MyApp\Http\Middleware\HttpsProtocol'
     ];
 }
