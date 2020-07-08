@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon.png') }}">
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
-    <title>Kreatip</title>
+    @yield('meta_tags')
 </head>
 
-<body>
+<body id="kreatip">
 
     {{-- Navbar --}}
     <nav id="nav" class="navbar navbar-expand-lg navbar-light">

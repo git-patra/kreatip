@@ -15,7 +15,7 @@ function selectMateri(link, link2) {
             .find(":selected")
             .val();
 
-        fetch("http://api.localhost:8000/api/materi/artikel")
+        fetch("http://api.localhost:8000/api_g9gxv/materi/artikel")
             .then(response => {
                 if (response.ok) {
                     return response.json();

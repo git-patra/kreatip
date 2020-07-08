@@ -17,8 +17,10 @@ class apiController extends Controller
     {
         return BlogResource::collection(t_tips_blog::all());
     }
-    function categories()
+
+    function search($keyword)
     {
-        return CategoryResource::collection(t_tips_category::all());
+        $result = t_tips_blog::where('blog_title', 'like', '%' . $keyword . '%')->get();
+        return BlogResource::collection($result);
     }
 }

@@ -27,12 +27,40 @@ class apiController extends Controller
     {
         return BlogResource::collection(t_info_blog::all());
     }
+
+    function categories()
+    {
+        return CategoryResource::collection(t_info_category::all());
+    }
+
+    function subcategories()
+    {
+        return SubcategoryResource::collection(t_info_subcategory::all());
+    }
+
+    function pelajars()
+    {
+        return PelajarResource::collection(t_info_pelajar::all());
+    }
+
+    function continents()
+    {
+        return ContinentResource::collection(t_info_continent::all());
+    }
+
     function countries()
     {
         return CountryResource::collection(t_info_country::all());
     }
+
     function courses()
     {
         return CourseResource::collection(t_info_course::all());
+    }
+
+    function search($keyword)
+    {
+        $result = t_info_blog::where('blog_title', 'like', '%' . $keyword . '%')->get();
+        return BlogResource::collection($result);
     }
 }

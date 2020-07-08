@@ -1,5 +1,32 @@
 @extends('layouts.app')
 
+@section('meta_tags')
+
+<title>Tips</title>
+
+<meta name='description' itemprop='description'
+    content='Area tips dari website Kreatip, disini terdapat berbagai tips kreatif, fresh, dan tentunya menarik untuk dibaca.' />
+<link rel="canonical" href="{{url()->current()}}" />
+
+<meta property="og:site_name" content="Kreatip" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tips" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:description"
+    content="Area tips dari website Kreatip, disini terdapat berbagai tips kreatif, fresh, dan tentunya menarik untuk dibaca." />
+<meta property="og:url" content="{{url()->current()}}" />
+<meta property="og:locale:alternate" content="en-us" />
+
+<meta property='article:section' content='tips' />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Tips" />
+<meta name="twitter:description"
+    content="Area tips dari website Kreatip, disini terdapat berbagai tips kreatif, fresh, dan tentunya menarik untuk dibaca." />
+<meta name="twitter:image" content="https://kreatip.id/main/img/icon/kreatip.png" />
+<meta name="twitter:site" content="{{url()->current()}}" />
+
+@endsection
 
 @section('main')
 
@@ -23,7 +50,7 @@
                                 <div id="carousel{{ $loop->iteration }}" class="carousel slide" data-ride="carousel"
                                     data-aos="zoom-in" data-aos-duration="800">
                                     <div class="carousel-inner">
-                                        @foreach ($tips as $tip)
+                                        @foreach (${'tips'.$loop->iteration} as $tip)
                                         <div class="carousel-item {{ ($loop->iteration == 1) ? 'active' : '' }}">
 
                                             <a
@@ -99,9 +126,9 @@
                         @endforeach
                     </div>
 
-                    <p class="text-right">
+                    {{-- <p class="text-right">
                         <button class="btn btn-loadmore" type="submit">Load More</button>
-                    </p>
+                    </p> --}}
 
                 </div>
 
@@ -124,14 +151,14 @@
                     <div class="row suggest-card">
                         <div class="col-4">
                             <a
-                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
+                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
                                 <img src="{{ asset('storage/materi/img' . '/' . $belajar->img_thumb ) }}"
                                     alt="{{ asset('storage/materi/img' . '/' . $belajar->bab_mapel ) }}">
                             </a>
                         </div>
                         <div class="col-8">
                             <a
-                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
+                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
                                 {{ $first_part }}{{ $titik }}
                             </a>
                         </div>

@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@extends('layouts.meta')
 
 @section('main')
 <main id="tips" class="container tips">
@@ -48,14 +49,14 @@
                     <div class="row suggest-card">
                         <div class="col-4">
                             <a
-                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
+                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
                                 <img src="{{ asset('storage/materi/img' . '/' . $belajar->img_thumb ) }}"
                                     alt="{{ asset('storage/materi/img' . '/' . $belajar->bab_mapel ) }}">
                             </a>
                         </div>
                         <div class="col-8">
                             <a
-                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
+                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
                                 {{ $first_part }}{{ $titik }}
                             </a>
                         </div>

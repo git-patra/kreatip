@@ -54,7 +54,7 @@ class indexController extends Controller
         $title = str_replace('-', ' ', $title);
         $course = str_replace('-', ' ', $course);
 
-        $course = t_materi_course::where('course_name_alias', $course)->first();
+        $course = t_materi_course::where('course_name', $course)->first();
         $subcat = t_materi_subcategory::where('id', $course->t_materi_subcategory_id)->first();
         $courses = t_materi_course::where('t_materi_subcategory_id', $subcat->id)->get();
 

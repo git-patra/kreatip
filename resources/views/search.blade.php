@@ -12,7 +12,7 @@
                 @foreach ($belajars as $article)
                 @php
                 $title = explode(" ", $article->blog_title);
-                $course = str_replace(" ", '-', $article->materiCourse->course_name_alias);
+                $course = str_replace(" ", '-', $article->materiCourse->course_name);
                 $jumlah = count($title);
                 $titik = '';
                 ($jumlah > 13) ? $titik='...' : '' ; $first_part=implode(" ", array_splice($title, 0, 13));

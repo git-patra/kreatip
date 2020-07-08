@@ -1,5 +1,32 @@
 @extends('layouts.app')
 
+@section('meta_tags')
+<title>About Kreatip</title>
+
+<meta name='description' itemprop='description'
+    content='Kreatip merupakan website yang menyediakan berbagai materi pembelajaran dari skill yang dibutuhkan para millenial dan generasi Z, isi artikelnya yang tidak terlalu kaku dapat mempermudah para pembaca memahi isi artikel website Kreatip. Selain pembelajaran, website kreatip pun menyediakan berbagai tips dan informasi yang dibutuhkan di kehidupan saat ini' />
+<link rel="canonical" href="{{url()->current()}}" />
+
+<meta property="og:site_name" content="Kreatip" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="About Kreatip" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:description"
+    content="Kreatip merupakan website yang menyediakan berbagai materi pembelajaran dari skill yang dibutuhkan para millenial dan generasi Z, isi artikelnya yang tidak terlalu kaku dapat mempermudah para pembaca memahi isi artikel website Kreatip. Selain pembelajaran, website kreatip pun menyediakan berbagai tips dan informasi yang dibutuhkan di kehidupan saat ini" />
+<meta property="og:url" content="{{url()->current()}}" />
+<meta property="og:locale:alternate" content="en-us" />
+
+<meta property='article:section' content='pembelajaran' />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="About Kreatip" />
+<meta name="twitter:description"
+    content="Kreatip merupakan website yang menyediakan berbagai materi pembelajaran dari skill yang dibutuhkan para millenial dan generasi Z, isi artikelnya yang tidak terlalu kaku dapat mempermudah para pembaca memahi isi artikel website Kreatip. Selain pembelajaran, website kreatip pun menyediakan berbagai tips dan informasi yang dibutuhkan di kehidupan saat ini" />
+<meta name="twitter:image" content="https://kreatip.id/main/img/icon/kreatip.png" />
+<meta name="twitter:site" content="{{url()->current()}}" />
+
+@endsection
+
 @section('main')
 
 <!-- Me -->

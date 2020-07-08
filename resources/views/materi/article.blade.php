@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@extends('layouts.meta')
 
 @section('main')
 <section id="map" class="map">
@@ -27,8 +28,8 @@
                 <input id="search-materi2" type="text" class="form-control" placeholder="Search Materi">
                 <select id="select-course2" class="custom-select" name="selectCourse">
                     @foreach ($courses as $co)
-                    <option {{ ($co->id === $course->id) ? 'selected' : '' }} value="{{ $co->course_name_alias }}">
-                        {{ $co->course_name_alias }}</option>
+                    <option {{ ($co->id === $course->id) ? 'selected' : '' }} value="{{ $co->course_name }}">
+                        {{ $co->course_name }}</option>
                     @endforeach
                 </select>
 
@@ -37,7 +38,7 @@
                     <ul>
                         @foreach ($articles as $art)
                         @php
-                        $course = strtolower(str_replace(' ', '-', $art->materiCourse->course_name_alias));
+                        $course = strtolower(str_replace(' ', '-', $art->materiCourse->course_name));
                         $title = strtolower(str_replace(' ', '-', $art->bab_mapel));
                         $puretitle = $art->bab_mapel;
                         @endphp

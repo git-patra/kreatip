@@ -1,5 +1,33 @@
 @extends('layouts.app')
 
+@section('meta_tags')
+
+<title>Home</title>
+
+<meta name='description' itemprop='description'
+    content='Kreatip merupakan website yang menyediakan berbagai materi pembelajaran dari skill yang dibutuhkan para millenial dan generasi Z, isi artikelnya yang tidak terlalu kaku dapat mempermudah para pembaca memahi isi artikel website Kreatip. Selain pembelajaran, website kreatip pun menyediakan berbagai tips dan informasi yang dibutuhkan di kehidupan saat ini' />
+<link rel="canonical" href="{{url()->current()}}" />
+
+<meta property="og:site_name" content="Kreatip" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Kreatip" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:description"
+    content="Kreatip merupakan website yang menyediakan berbagai materi pembelajaran dari skill yang dibutuhkan para millenial dan generasi Z, isi artikelnya yang tidak terlalu kaku dapat mempermudah para pembaca memahi isi artikel website Kreatip. Selain pembelajaran, website kreatip pun menyediakan berbagai tips dan informasi yang dibutuhkan di kehidupan saat ini" />
+<meta property="og:url" content="{{url()->current()}}" />
+<meta property="og:locale:alternate" content="en-us" />
+
+<meta property='article:section' content='pembelajaran' />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Kreatip" />
+<meta name="twitter:description"
+    content="Kreatip merupakan website yang menyediakan berbagai materi pembelajaran dari skill yang dibutuhkan para millenial dan generasi Z, isi artikelnya yang tidak terlalu kaku dapat mempermudah para pembaca memahi isi artikel website Kreatip. Selain pembelajaran, website kreatip pun menyediakan berbagai tips dan informasi yang dibutuhkan di kehidupan saat ini" />
+{{-- <meta name="twitter:image" content="https://kreatip.id/main/img/icon/kreatip.png" /> --}}
+<meta name="twitter:site" content="{{url()->current()}}" />
+
+@endsection
+
 @section('main')
 <section class="wp">
     <div class="row row-cols-1 row-cols-md-2">
@@ -62,7 +90,7 @@
                             @foreach ($belajars as $belajar)
                             <div class="carousel-item {{ ($loop->iteration == 1) ? 'active' : '' }}">
                                 <a
-                                    href="{{ url('materi/'. strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias)) . '/' . strtolower(str_replace(' ', '-',$belajar->bab_mapel)) ) }}">
+                                    href="{{ url('materi/'. strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name)) . '/' . strtolower(str_replace(' ', '-',$belajar->bab_mapel)) ) }}">
                                     <img src="{{ asset('storage/materi/img' . '/' . $belajar->img_thumb ) }}"
                                         class="d-block w-100"
                                         alt="{{ asset('storage/materi/img' . '/' . $belajar->blog_title ) }}">
@@ -70,7 +98,7 @@
 
                                 <div class="carousel-caption">
                                     <a
-                                        href="{{ url('materi/'. strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias)) . '/' . strtolower(str_replace(' ', '-',$belajar->bab_mapel)) ) }}">
+                                        href="{{ url('materi/'. strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name)) . '/' . strtolower(str_replace(' ', '-',$belajar->bab_mapel)) ) }}">
                                         <h5>{{ $belajar->blog_title }}</h5>
                                     </a>
                                 </div>

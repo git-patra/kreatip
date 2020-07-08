@@ -1,5 +1,33 @@
 @extends('layouts.app')
 
+@section('meta_tags')
+
+<title>Belajar</title>
+
+<meta name='description' itemprop='description'
+    content='Area pembelajaran dari website Kreatip, disini terdapat berbagai materi dari beberapa skill yang dibutuhkan di dunia pekerjaan saat ini. Baik dari bidang IT, sastra bahasa, design, dan skill lainnya yang menarik untuk dipelajari' />
+<link rel="canonical" href="{{url()->current()}}" />
+
+<meta property="og:site_name" content="Kreatip" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Materi Pembelajaran" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:description"
+    content="Area pembelajaran dari website Kreatip, disini terdapat berbagai materi dari beberapa skill yang dibutuhkan di dunia pekerjaan saat ini. Baik dari bidang IT, sastra bahasa, design, dan skill lainnya yang menarik untuk dipelajari" />
+<meta property="og:url" content="{{url()->current()}}" />
+<meta property="og:locale:alternate" content="en-us" />
+
+<meta property='article:section' content='pembelajaran' />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Materi Pembelajaran" />
+<meta name="twitter:description"
+    content="Area pembelajaran dari website Kreatip, disini terdapat berbagai materi dari beberapa skill yang dibutuhkan di dunia pekerjaan saat ini. Baik dari bidang IT, sastra bahasa, design, dan skill lainnya yang menarik untuk dipelajari" />
+<meta name="twitter:image" content="https://kreatip.id/storage/landing/img/belajar.png" />
+<meta name="twitter:site" content="{{url()->current()}}" />
+
+@endsection
+
 @section('main')
 
 <!-- Main Menu -->

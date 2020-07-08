@@ -21,7 +21,13 @@ class indexController extends Controller
     function index()
     {
         $beasiswas = t_info_blog::all()->where('t_info_category_id', 1)->random(3);
+        $beasiswas1 = t_info_blog::all()->where('t_info_category_id', 1)->random(3);
+        $beasiswas2 = t_info_blog::all()->where('t_info_category_id', 1)->random(3);
+        $beasiswas3 = t_info_blog::all()->where('t_info_category_id', 1)->random(3);
         $pelatihans = t_info_blog::all()->where('t_info_category_id', 2)->random(3);
+        $pelatihans1 = t_info_blog::all()->where('t_info_category_id', 2)->random(3);
+        $pelatihans2 = t_info_blog::all()->where('t_info_category_id', 2)->random(3);
+        $pelatihans3 = t_info_blog::all()->where('t_info_category_id', 2)->random(3);
         $belajars = t_materi_blog::all()->random(3);
         $tips = t_tips_blog::all()->random(3);
 
@@ -30,7 +36,13 @@ class indexController extends Controller
         return view('info/index', [
             'tips' => $tips,
             'beasiswas' => $beasiswas,
+            'beasiswas1' => $beasiswas1,
+            'beasiswas2' => $beasiswas2,
+            'beasiswas3' => $beasiswas3,
             'pelatihans' => $pelatihans,
+            'pelatihans1' => $pelatihans1,
+            'pelatihans2' => $pelatihans2,
+            'pelatihans3' => $pelatihans3,
             'belajars' => $belajars,
             'categories' => $categories,
         ]);

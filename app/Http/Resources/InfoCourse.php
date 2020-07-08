@@ -17,7 +17,7 @@ class InfoCourse extends JsonResource
         return [
             'id' => $this->id,
             'keahlian' => $this->infoSubcategory->subcategory_name,
-            'course' => $this->course_name,
+            'name' => $this->course_name,
             'status' => $this->status,
             'creator' => $this->creator,
             'created_at' => $this->created_at,

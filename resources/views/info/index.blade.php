@@ -1,5 +1,35 @@
 @extends('layouts.app')
 
+@section('meta_tags')
+
+<title>Info</title>
+
+<meta name='description' itemprop='description'
+    content='Area informasi dari website kreatip, membagikan informasi bermanfaat seperti beasiswa, pelatihan skill gratis, dan informasi bermanfaat lainnya' />
+<link rel="canonical" href="{{url()->current()}}" />
+
+{{-- ! Tag <meta name='keywords' content='{{$tags}}' /> --}}
+<meta property='article:section' content='informasi' />
+
+<meta property="og:description"
+    content="Area informasi dari website kreatip, membagikan informasi bermanfaat seperti beasiswa, pelatihan skill gratis, dan informasi bermanfaat lainnya" />
+<meta property="og:title" content="Info" />
+<meta property="og:url" content="{{url()->current()}}" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:locale:alternate" content="en-us" />
+<meta property="og:site_name" content="Kreatip" />
+
+<meta property="article:publisher" content="https://www.facebook.com/anugrahpatra.nurdiansah" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Info" />
+<meta name="twitter:description"
+    content="Area informasi dari website kreatip, membagikan informasi bermanfaat seperti beasiswa, pelatihan skill gratis, dan informasi bermanfaat lainnya" />
+<meta name="twitter:site" content="{{url()->current()}}" />
+
+@endsection
+
 @section('main')
 <main id="main-list" class="container main-list">
     <!-- Page -->
@@ -30,7 +60,7 @@
                     <div id="carousel{{ $loop->iteration }}" class="carousel slide" data-ride="carousel"
                         data-aos="zoom-in" data-aos-duration="900">
                         <div class="carousel-inner">
-                            @foreach ($beasiswas as $bea)
+                            @foreach (${'beasiswas'.$loop->iteration} as $bea)
                             <div class="carousel-item {{ ($loop->iteration == 1) ? 'active' : '' }}">
                                 <a href="{{ url('info/' . strtolower($category->category_name) . '/' . strtolower(str_replace(' ', '-', $bea->blog_title)) ) }}"
                                     title="{{ $bea->blog_title }}">
@@ -68,7 +98,7 @@
                     <div id="carousel{{ $loop->iteration+3 }}" class="carousel slide" data-ride="carousel"
                         data-aos="zoom-in" data-aos-duration="900">
                         <div class="carousel-inner">
-                            @foreach ($pelatihans as $blo)
+                            @foreach (${'pelatihans'.$loop->iteration} as $blo)
                             <div class="carousel-item {{ ($loop->iteration+3 == 4) ? 'active' : '' }}">
                                 <a href="{{ url('info/' . strtolower($category->category_name) . '/' . strtolower(str_replace(' ', '-', $blo->blog_title)) ) }}"
                                     title="{{ $blo->blog_title }}">
@@ -122,14 +152,14 @@
                     <div class="row suggest-card">
                         <div class="col-4">
                             <a
-                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
+                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
                                 <img src="{{ asset('storage/materi/img' . '/' . $belajar->img_thumb ) }}"
                                     alt="{{ asset('storage/materi/img' . '/' . $belajar->bab_mapel ) }}">
                             </a>
                         </div>
                         <div class="col-8">
                             <a
-                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
+                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
                                 {{ $first_part }}{{ $titik }}
                             </a>
                         </div>

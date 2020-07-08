@@ -31,6 +31,7 @@ $mt4: 4rem;
         img {
             max-width: 600px;
             cursor: zoom-in;
+            max-height: 338px;
         }
 
         table {
@@ -94,6 +95,12 @@ $mt4: 4rem;
         .card-msearch:hover {
             cursor: pointer;
             box-shadow: 1px 1px 10px $shadow;
+        }
+
+        .suggest-article {
+            img {
+                cursor: pointer;
+            }
         }
     }
 

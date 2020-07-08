@@ -1,5 +1,5 @@
 import $ from "jquery";
-import Swal from "sweetalert2";
+import tilt from "tilt.js";
 
 //* ===== Scroll to Top ==== //
 $(window).scroll(function() {
@@ -40,11 +40,11 @@ $(".btn-search").on("click", function() {
     );
 });
 
-//* ===== Scroll Focus ==== //
-const listFocus = document.querySelector(".focus");
-if (listFocus) {
-    listFocus.scrollIntoView({ behavior: "smooth" });
-}
+// //* ===== Scroll Focus ==== //
+// const listFocus = document.querySelector(".focus");
+// if (listFocus) {
+//     listFocus.scrollIntoView({ behavior: "smooth" });
+// }
 
 //* ===== Image Lightbox & Table Scrollable ==== //
 function addEl(link) {
@@ -55,13 +55,24 @@ function addEl(link) {
 }
 addEl(".materi-article");
 addEl(".tips-article");
+addEl(".info-article");
 $(".suggest-article img").removeAttr("data-imagebox");
 
-const flashData = $(".flash-data").data("flashdata");
+//* ===== Image Hover animation on Login Page ==== //
+$(".js-tilt").tilt({
+    scale: 1.1
+});
 
-if (flashData == "Email berhasil terkirim!") {
-    Swal.fire({
-        text: flashData,
-        icon: "success"
+//* Input File Change Name *//
+function imgText(link) {
+    $(link).on("change", function() {
+        //get the file name
+        const fileName = this.files[0].name;
+        //replace the "Choose a file" label
+        $(this)
+            .next(".custom-file-label")
+            .html(fileName);
     });
 }
+imgText("#inputImgFile");
+imgText("#imgthumb");

@@ -16,9 +16,8 @@ class MateriCourse extends JsonResource
     {
         return [
             'id' => $this->id,
-            't_materi_subcategory_id' => $this->subCategory->subcategory_name,
+            'subcategory' => $this->materiSubcategory->subcategory_name,
             'course' => $this->course_name,
-            'course_alias' => $this->course_name_alias,
             'status' => $this->status,
             'creator' => $this->creator,
             'created_at' => $this->created_at,

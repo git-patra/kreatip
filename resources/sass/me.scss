@@ -1,6 +1,6 @@
 /* Utility */
-$colortheme: #F0ECF7;
-$colortheme2: #A8A2E2;
+$colortheme: #f0ecf7;
+$colortheme2: #a8a2e2;
 $shadow: #ddd;
 $color: #fff;
 $mt4: 4rem;
@@ -10,23 +10,22 @@ $mt4: 4rem;
     padding: 2rem;
 
     h2 {
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
     }
 }
-
 
 /*Profile Card 3*/
 .profile {
     padding: 3rem;
 
-    @media(max-width:380px) {
+    @media (max-width: 380px) {
         .col {
             padding: 0;
         }
     }
 
     .profile-card-3 {
-        font-family: 'Open Sans', Arial, sans-serif;
+        font-family: "Open Sans", Arial, sans-serif;
         position: relative;
         overflow: hidden;
         width: 100%;
@@ -51,7 +50,7 @@ $mt4: 4rem;
             padding: 15px 25px;
             color: #232323;
             float: left;
-            background: #F9FBFD;
+            background: #fff;
             height: 50%;
             border-radius: 0 0 5px 5px;
             position: relative;
@@ -61,12 +60,11 @@ $mt4: 4rem;
                 width: 3.5rem !important;
                 height: 3.5rem !important;
             }
-
         }
 
         .card-content::before {
-            content: '';
-            background: #F9FBFD;
+            content: "";
+            background: #fff;
             width: 120%;
             height: 100%;
             left: 11px;
@@ -116,9 +114,7 @@ $mt4: 4rem;
             color: #fff;
             text-decoration: none;
         }
-
     }
-
 }
 
 .zoom:hover {
@@ -130,7 +126,7 @@ $mt4: 4rem;
     background-color: $colortheme;
     padding: 4rem;
 
-    @media(max-width:768px) {
+    @media (max-width: 768px) {
         h2 {
             font-size: 1.5rem;
         }
@@ -146,19 +142,18 @@ $mt4: 4rem;
         background-color: #ffffff !important;
         border-radius: 10px;
         background: $colortheme;
-        box-shadow: 20px 20px 60px #ccc9d2,
-            -20px -20px 60px #ffffff;
+        box-shadow: 20px 20px 60px #ccc9d2, -20px -20px 60px #ffffff;
 
         .card {
             border: none;
 
             h1 {
                 margin-bottom: 0;
-                padding: .5rem;
+                padding: 0.5rem;
             }
 
             .card-body {
-                padding: .5rem;
+                padding: 0.5rem;
             }
         }
     }
@@ -171,14 +166,12 @@ $mt4: 4rem;
             background-color: #ffffff !important;
             border-radius: 20px;
             background: $colortheme;
-            box-shadow: 20px 20px 60px #ccc9d2,
-                -20px -20px 60px #ffffff;
+            box-shadow: 20px 20px 60px #ccc9d2, -20px -20px 60px #ffffff;
         }
-
     }
 
     .btn-contact {
-        border: 1px solid rgba($colortheme2, $alpha: .8);
+        border: 1px solid rgba($colortheme2, $alpha: 0.8);
     }
 
     .btn-contact:hover {
@@ -186,11 +179,9 @@ $mt4: 4rem;
         background-color: $colortheme2;
         color: $color;
     }
-
-
 }
 
-@media(max-width: 380px) {
+@media (max-width: 380px) {
     .contact {
         padding: 1rem;
 
@@ -212,14 +203,13 @@ $mt4: 4rem;
 
 /* Credit */
 .credit {
-
     .me-credit {
         margin-top: $mt4;
         padding: 3rem;
         box-shadow: 1px 1px 10px $shadow;
     }
 
-    @media(max-width:768px) {
+    @media (max-width: 768px) {
         .me-credit {
             padding: 2rem;
 
@@ -229,7 +219,7 @@ $mt4: 4rem;
         }
     }
 
-    @media(max-width: 380px) {
+    @media (max-width: 380px) {
         .me-credit {
             padding: 1rem;
 
@@ -246,11 +236,10 @@ $mt4: 4rem;
             padding: 1rem;
 
             h6 {
-                font-size: .9rem;
+                font-size: 0.9rem;
             }
         }
     }
-
 }
 
 /* Rules */
@@ -269,8 +258,7 @@ $mt4: 4rem;
     }
 }
 
-@media(max-width:380px) {
-
+@media (max-width: 380px) {
     .rules,
     .search {
         padding: 2rem;
@@ -279,10 +267,8 @@ $mt4: 4rem;
 
 /* Search */
 .search {
-
     /* Article Item Area */
     .article-item {
-
         h4 {
             margin-top: $mt2;
             margin-bottom: $mt2;
@@ -299,7 +285,7 @@ $mt4: 4rem;
         .card-search {
             min-height: 285px;
             max-height: 285px;
-            transition: .2s;
+            transition: 0.2s;
             border-radius: 10px;
             box-shadow: 1px 1px 10px $shadow;
 
@@ -315,7 +301,7 @@ $mt4: 4rem;
             }
         }
 
-        @media(max-width:380px) {
+        @media (max-width: 380px) {
             .col {
                 padding: 0;
             }
@@ -325,9 +311,8 @@ $mt4: 4rem;
             }
 
             .card-search {
-                transition: .2s;
+                transition: 0.2s;
             }
-
         }
 
         .card-search:hover {

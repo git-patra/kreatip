@@ -21,18 +21,12 @@ class apiController extends Controller
     {
         return BlogResource::collection(t_materi_blog::all());
     }
-    function courses()
+
+    function course()
     {
         return CourseResource::collection(t_materi_course::all());
     }
-    function subcategories()
-    {
-        return SubcategoryResource::collection(t_materi_subcategory::all());
-    }
-    function categories()
-    {
-        return CategoryResource::collection(t_materi_category::all());
-    }
+
     function search($keyword)
     {
         $result = t_materi_blog::where('blog_title', 'like', '%' . $keyword . '%')->get();

@@ -17,7 +17,8 @@ class InfoCountry extends JsonResource
         return [
             'id' => $this->id,
             'benua' => $this->infoContinent->continent_name,
-            'country' => $this->country_name,
+            'benua_id' => $this->t_info_continent_id,
+            'name' => $this->country_name,
             'status' => $this->status,
             'creator' => $this->creator,
             'created_at' => $this->created_at,

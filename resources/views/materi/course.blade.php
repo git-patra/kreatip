@@ -1,5 +1,33 @@
 @extends('layouts.app')
 
+@section('meta_tags')
+
+<title>Pilih Mata Pelajaran</title>
+
+<meta name='description' itemprop='description'
+    content='Area pemilihan materi pembelajaran, kalian tinggal memilih materi yang ingin dipelajari dibagian sidebar kiri atau dibagian atas untuk tampilan mobile' />
+<link rel="canonical" href="{{url()->current()}}" />
+
+<meta property="og:site_name" content="Kreatip" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Pilih Mata Pelajaran" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:description"
+    content="Area pemilihan materi pembelajaran, kalian tinggal memilih materi yang ingin dipelajari dibagian sidebar kiri atau dibagian atas untuk tampilan mobile," />
+<meta property="og:url" content="{{url()->current()}}" />
+<meta property="og:locale:alternate" content="en-us" />
+
+<meta property='article:section' content='pembelajaran' />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Pilih Mata Pelajaran" />
+<meta name="twitter:description"
+    content="Area pemilihan materi pembelajaran, kalian tinggal memilih materi yang ingin dipelajari dibagian sidebar kiri atau dibagian atas untuk tampilan mobile" />
+<meta name="twitter:image" content="https://kreatip.id/storage/landing/img/belajar.png" />
+<meta name="twitter:site" content="{{url()->current()}}" />
+
+@endsection
+
 @section('main')
 <section id="map" class="map">
     <div class="container">
@@ -24,7 +52,7 @@
                 <select id="select-course" class="custom-select" name="selectCourse">
                     <option selected disabled>Select Materi</option>
                     @foreach ($courses as $course)
-                    <option value="{{ $course->course_name_alias }}">{{ $course->course_name_alias }}</option>
+                    <option value="{{ $course->course_name }}">{{ $course->course_name }}</option>
                     @endforeach
                 </select>
 

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class t_materi_course extends Model
 {
-    public function subCategory()
+    public function materiSubcategory()
     {
         return $this->belongsTo('App\t_materi_subcategory', 't_materi_subcategory_id');
     }

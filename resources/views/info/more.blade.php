@@ -1,5 +1,49 @@
 @extends('layouts.app')
 
+@section('meta_tags')
+
+<title>Info {{ $category->category_name }}</title>
+@if ($category->category_name === 'Beasiswa')
+<meta name='description' itemprop='description'
+    content='Area informasi Beasiswa, disini kalian bisa mendapat informasi berbagai beasiswa baik dari sd hingga doktor, baik di dalam negeri maupun luar negeri' />
+@else
+<meta name='description' itemprop='description'
+    content='Area informasi Pelatihan, disini kalian bisa mendapat informasi berbagai rekomendasi pelatihan gratis/berbayar yang disediakan oleh pemerintah maupun swasta untuk mengupgrade skill kalian' />
+@endif
+<link rel="canonical" href="{{url()->current()}}" />
+
+{{-- ! Tag <meta name='keywords' content='{{$tags}}' /> --}}
+<meta property='article:section' content='informasi' />
+
+@if ($category->category_name === 'Beasiswa')
+<meta property="og:description"
+    content="Area informasi {{ $category->category_name }}, disini kalian bisa mendapat informasi berbagai beasiswa baik dari sd hingga doktor, baik di dalam negeri maupun luar negeri" />
+@else
+<meta property="og:description"
+    content="Area informasi {{ $category->category_name }}, disini kalian bisa mendapat informasi berbagai rekomendasi pelatihan gratis/berbayar yang disediakan oleh pemerintah maupun swasta untuk mengupgrade skill kalian" />
+@endif
+<meta property="og:title" content="Info {{ $category->category_name }}" />
+<meta property="og:url" content="{{url()->current()}}" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="id_ID" />
+<meta property="og:locale:alternate" content="en-us" />
+<meta property="og:site_name" content="Kreatip" />
+
+<meta property="article:publisher" content="https://www.facebook.com/anugrahpatra.nurdiansah" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Info {{ $category->category_name }}" />
+@if ($category->category_name === 'Beasiswa')
+<meta name="twitter:description"
+    content="Area informasi, disini kalian bisa mendapat informasi berbagai beasiswa baik dari sd hingga doktor, baik di dalam negeri maupun luar negeri" />
+@else
+<meta name="twitter:description"
+    content="Area informasi, disini kalian bisa mendapat informasi berbagai rekomendasi pelatihan gratis/berbayar yang disediakan oleh pemerintah maupun swasta untuk mengupgrade skill kalian" />
+@endif
+<meta name="twitter:site" content="{{url()->current()}}" />
+
+@endsection
+
 @section('main')
 <main id="info" class="container info">
     <!-- Page -->
@@ -96,9 +140,9 @@
                         @endforeach
                     </div>
 
-                    <p class="text-right">
+                    {{-- <p class="text-right">
                         <button class="btn btn-loadmore" type="submit">Load More</button>
-                    </p>
+                    </p> --}}
                 </div>
             </div>
         </article>
@@ -118,14 +162,14 @@
                     <div class="row suggest-card">
                         <div class="col-4">
                             <a
-                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
+                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
                                 <img src="{{ asset('storage/materi/img' . '/' . $belajar->img_thumb ) }}"
                                     alt="{{ asset('storage/materi/img' . '/' . $belajar->bab_mapel ) }}">
                             </a>
                         </div>
                         <div class="col-8">
                             <a
-                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name_alias))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
+                                href="/materi/{{ strtolower(str_replace(' ', '-', $belajar->materiCourse->course_name))}}/{{ strtolower(str_replace(' ', '-', $belajar->bab_mapel))}}">
                                 {{ $first_part }}{{ $titik }}
                             </a>
                         </div>

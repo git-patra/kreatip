@@ -16,7 +16,7 @@ class MateriBlog extends JsonResource
     {
         return [
             'id' => $this->id,
-            'course' => $this->materiCourse->course_name_alias,
+            'course' => $this->materiCourse->course_name,
             'mapel' => $this->bab_mapel,
             'title' => $this->blog_title,
             'thumbnail_path' => $this->img_thumb,
