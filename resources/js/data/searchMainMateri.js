@@ -17,7 +17,7 @@ function searchMateri(link) {
 
             if (searchvalue) {
                 fetch(
-                    `http://api.localhost:8000/api_g9gxv/materi/artikel/${searchvalue}`
+                    `https://api.kreatip.id/api_g9gxv/materi/artikel/${searchvalue}`
                 )
                     .then(response => {
                         return response.json();

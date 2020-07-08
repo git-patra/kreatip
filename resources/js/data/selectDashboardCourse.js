@@ -5,7 +5,7 @@ $("#selectSubcategoryDashboard").on("change", function() {
     <option class="option-load"><span class="sr-only text-center">Loading...</span></option>
     `);
 
-    fetch("http://api.localhost:8000/api_g9gxv/materi/course")
+    fetch("https://api.kreatip.id/api_g9gxv/materi/course")
         .then(response => {
             return response.json();
         })

@@ -7,7 +7,7 @@ $("#select-benua").on("change", function() {
     <option class="option-load"><span class="sr-only text-center">Please Wait...</span></option>
     `);
     const benua = $(this).val();
-    fetch("http://api.localhost:8000/api_g9gxv/info/country")
+    fetch("https://api.kreatip.id/api_g9gxv/info/country")
         .then(response => {
             return response.json();
         })
@@ -35,7 +35,7 @@ $("#select-keahlian").on("change", function() {
     <option class="option-load"><span class="sr-only text-center">Please Wait...</span></option>
     `);
     const keahlian = $(this).val();
-    fetch("http://api.localhost:8000/api_g9gxv/info/course")
+    fetch("https://api.kreatip.id/api_g9gxv/info/course")
         .then(response => {
             return response.json();
         })

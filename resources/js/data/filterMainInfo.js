@@ -44,7 +44,7 @@ $("#btnFilter-info").on("click", _ => {
         </div>
         </div>`);
 
-    fetch(`http://api.localhost:8000/api_g9gxv/info/artikel`)
+    fetch(`https://api.kreatip.id/api_g9gxv/info/artikel`)
         .then(response => {
             return response.json();
         })

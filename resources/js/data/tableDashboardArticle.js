@@ -18,7 +18,7 @@ function tableArticle(input, table, url) {
 
             if (searchValue) {
                 fetch(
-                    `http://api.localhost:8000/api_g9gxv/${url}/artikel/${searchValue}`
+                    `https://api.kreatip.id/api_g9gxv/${url}/artikel/${searchValue}`
                 )
                     .then(response => {
                         return response.json();

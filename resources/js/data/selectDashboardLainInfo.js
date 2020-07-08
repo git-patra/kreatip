@@ -15,7 +15,7 @@ function appendSelect(name) {
             </div>
         </div>`);
 
-    fetch(`http://api.localhost:8000/api_g9gxv/info/${named}`)
+    fetch(`https://api.kreatip.id/api_g9gxv/info/${named}`)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -38,7 +38,7 @@ function appendSelect(name) {
 function appendSelectSub(id) {
     const template = $(".select-lainnya");
 
-    fetch(`http://api.localhost:8000/api_g9gxv/info/subcategory`)
+    fetch(`https://api.kreatip.id/api_g9gxv/info/subcategory`)
         .then(response => {
             if (response.ok) {
                 return response.json();
@@ -84,7 +84,7 @@ function appendSelectSub(id) {
                 $(".select-lainnya #pelajar").append(`
                 <option class="option-load"><span class="sr-only text-center">Loading...</span></option>
                 `);
-                fetch(`http://api.localhost:8000/api_g9gxv/info/pelajar`)
+                fetch(`https://api.kreatip.id/api_g9gxv/info/pelajar`)
                     .then(response => {
                         if (response.ok) {
                             return response.json();
@@ -113,7 +113,7 @@ function appendSelectSub(id) {
                 $(".select-lainnya #country").append(`
                 <option class="option-load"><span class="sr-only text-center">Loading...</span></option>
                 `);
-                fetch(`http://api.localhost:8000/api_g9gxv/info/country`)
+                fetch(`https://api.kreatip.id/api_g9gxv/info/country`)
                     .then(response => {
                         if (response.ok) {
                             return response.json();
